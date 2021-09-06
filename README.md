@@ -1,5 +1,5 @@
 
-## Likedin-clone is a functional, responsive E-commerce Website created with React, Redux and Firebase.**
+## Likedin-clone is a functional, responsive Website created with React, Redux and Firebase.**
 
 **Watch the website: https://linkedin-clone-6c202.web.app**
 
