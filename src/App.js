@@ -1,56 +1,61 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, { useEffect } from 'react';
 import './App.css';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import Signup from './Pages/Signup';
+import Signin from './Pages/Signin';
+import Main from './Pages/Main';
+import { useDispatch } from 'react-redux';
+import { auth } from './components/firebase';
+import { selectIsLoggedin } from './features/userSlice';
+import { useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { signin, logout } from './features/userSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  const isLoggedin = useSelector(selectIsLoggedin);
+  const history = useHistory();
+
+  useEffect(() => {
+    auth.onAuthStateChanged((userAuth) => {
+      if (userAuth) {
+        dispatch(
+          signin({
+            displayName: userAuth.displayName,
+            photoUrl: userAuth.photoURL,
+            email: userAuth.email,
+            uid: userAuth.uid,
+          })
+        );
+        history.push('/main');
+      } else {
+        dispatch(logout());
+      }
+    });
+  }, [dispatch, history]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Switch>
+        <Route path="/" exact>
+          {isLoggedin && <Redirect to="/main" />}
+          {!isLoggedin && <Redirect to="/signin" />}
+        </Route>
+
+        {isLoggedin && (
+          <Route path="/main">
+            <Main />
+          </Route>
+        )}
+
+        <Route path="/signup" exact component={Signup} />
+
+        <Route path="/signin" exact component={Signin} />
+
+        <Route path="*">
+          {isLoggedin && <Redirect to="/main" />}
+          {!isLoggedin && <Redirect to="/signin" />}
+        </Route>
+      </Switch>
     </div>
   );
 }

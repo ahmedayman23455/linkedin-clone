@@ -1,0 +1,74 @@
+.auth {
+  min-height: 100vh;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.auth > img {
+  width: 10em;
+  height: 5.5em;
+  object-fit: contain;
+}
+
+.auth__section {
+  max-width: 390px;
+  width: 90%;
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 2em;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 15%);
+}
+
+.auth__form {
+  background-color: white;
+
+  border-radius: var(--border_radius);
+}
+
+.auth__form > p {
+  font-size: 0.8rem;
+  color: var(--primary_color);
+  margin-bottom: 1em;
+}
+
+.auth__form > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth__form input {
+  width: 100%;
+  font-family: inherit;
+  padding: 0.55em 0.4em;
+  border-radius: var(--border_radius);
+  outline: none;
+  margin-bottom: 1em;
+  border: 1px solid var(--primary_color);
+  font-size: 0.91 rem;
+}
+
+.auth__form button {
+  display: block;
+  padding: 0.8em 0;
+  border-radius: 100px;
+  background: none;
+  border: none;
+  background-color: #0b66c3;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.auth__register {
+  margin-top: 1em;
+  font-size: 0.9rem;
+}
+
+.auth__register > span {
+  display: inline-block;
+  color: #0b66c3;
+  margin-left: 0.3em;
+  cursor: pointer;
+}
