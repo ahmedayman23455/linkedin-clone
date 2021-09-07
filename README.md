@@ -30,12 +30,16 @@ Use Firebase to build **full stack application.**
 - **Any user can sign up by entering personal information like name, photo URL, email, and password**
 - **The user can sign in with his email and password**
 --- 
+https://user-images.githubusercontent.com/57132693/132332752-50959442-69fd-4ab7-93a5-3907c3ec1ea8.mp4
 #### Main Page.
 ![alt tag](https://github.com/ahmedayman23455/linkedin-clone/blob/a9ec00cafd61342befb93e9ab70869a9e768d583/assets/Screenshot_1.png)
 ![alt tag](https://github.com/ahmedayman23455/linkedin-clone/blob/a9ec00cafd61342befb93e9ab70869a9e768d583/assets/tablet.png)
 ![alt tag](https://github.com/ahmedayman23455/linkedin-clone/blob/a9ec00cafd61342befb93e9ab70869a9e768d583/assets/mobile.png)
 
-#### &#9758; Complete MVP:
-![alt tag](https://github.com/ahmedayman23455/linkedin-clone/blob/a9ec00cafd61342befb93e9ab70869a9e768d583/assets/mockups/Untitled%20designbig.png)
-![alt tag](https://github.com/ahmedayman23455/linkedin-clone/blob/a9ec00cafd61342befb93e9ab70869a9e768d583/assets/mockups/Untitled%20design2big.jpg)
+
+
+
+
+
+
 
