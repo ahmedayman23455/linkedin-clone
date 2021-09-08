@@ -1,4 +1,4 @@
-## Likedin-clone is a functional, responsive Website created with React, Redux and Firebase.**
+## Likedin-clone is a functional, responsive Website created with React, Redux and Firebase
 
 **Watch the website (live demo): https://linkedin-clone-6c202.web.app**
 
@@ -7,23 +7,25 @@
 
 **( React & Redux )**
 
-Use **Redux for state management.**
+- Use **Redux for state management.**
 
-Routing with **React Router.**
+- Routing with **React Router.**
 
 
 **( Firebase & Firestore )**
 
-Use Firebase to build **full stack application.**
+- Use Firebase to build **full stack application.**
 
-**Sign-In and Sign-up** workflow with Firebase.
+- **Sign-In and Sign-up** workflow with Firebase.
 
-**Email and password** Authentification.
+- **Email and password** Authentification. 
 
-**Storing posts In FireStore.**
+- **Authentication State Persistence** 
+
+- **Storing posts In FireStore.**
 
 **( Material UI )**   
-use icons components of material ui
+- use icons components of material ui
 
 ---
 #### Overview & Goal. 
